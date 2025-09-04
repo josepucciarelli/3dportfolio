@@ -47,7 +47,7 @@ const ShowcaseSection = () => {
         <div id="work" ref={sectionRef} className="app-showcase">
             <div className="w-full">
                 <div className='showcaselayout'>
-                    <div ref={FabioARef} className="first-project-wrapper">
+                    <a href="https://fabioaraujopy.com/" target="_blank" rel="noopener noreferrer" ref={FabioARef} className="first-project-wrapper cursor-pointer block">
                         <div className="image-wrapper">
                             <img src="/images/project1.webp" alt="Fabio Araujo" />
                         </div>
@@ -59,10 +59,10 @@ const ShowcaseSection = () => {
                                 An app built with React Native, TypeScript, & TailwindCSS for a fast, user-friendly experience.
                             </p>
                         </div>
-                    </div>
+                    </a>
 
                     <div className="project-list-wrapper overflow-hidden">
-                        <div className="project" ref={GoogleDRef}>
+                        <a href="https://google-drive-clone-beta-ivory.vercel.app/sign-in" target="_blank" rel="noopener noreferrer" className="project cursor-pointer block" ref={GoogleDRef}>
                             <div className="image-wrapper bg-[#e5eef5]">
                                 <img
                                     src="/images/project2.webp"
@@ -70,14 +70,14 @@ const ShowcaseSection = () => {
                                 />
                             </div>
                             <h2>Google Drive Clone</h2>
-                        </div>
+                        </a>
 
-                        <div className="project" ref={ResumitRef}>
+                        <a href="https://mediumblue-koala-315548.hostingersite.com/" target="_blank" rel="noopener noreferrer" className="project cursor-pointer block" ref={ResumitRef}>
                             <div className="image-wrapper bg-[#dfefeb]">
                                 <img src="/images/project3.png" alt="AI Analyzer" />
                             </div>
                             <h2>Resumit - AI Analyzer</h2>
-                        </div>
+                        </a>
                     </div>
 
                 </div>
