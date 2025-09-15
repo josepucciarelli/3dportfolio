@@ -1,6 +1,6 @@
 import {words} from "../constants/index.js";
 import Button from "../components/Button.jsx";
-import HeroExperience from "../components/HeroModels/HeroExperience.jsx";
+import HeroExperience from "../components/models/HeroModels/HeroExperience.jsx";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import AnimatedCounter from "../components/AnimatedCounter.jsx";
@@ -57,7 +57,7 @@ const Hero = () => {
                 <h1>that Deliver Results</h1>
                 </div>
                 <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                    Hi I'm Jose Pucciarelli, a developer based un Paraguay with passion for web development.
+                    Hi I'm Jose Pucciarelli, a developer based in Paraguay with passion for web development.
                 </p>
                 <Button
                     text="See My Work"
