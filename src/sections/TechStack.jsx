@@ -71,7 +71,7 @@ const TechStack = () => {
                         </div>
                     ))} */}
 
-                    {/* This is for the img part */}
+
                      {techStackImgs.map((techStackIcon, index) => (
             <div
               key={index}
