@@ -189,53 +189,58 @@ const testimonials = [
         mentions: "@estherhoward",
         review:
             "I can’t say enough good things about Jose. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
-        imgPath: "/images/client1.png",
+        imgPath: "",
     },
     {
         name: "Wade Warren",
         mentions: "@wadewarren",
         review:
             "Working with Jose was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
-        imgPath: "/images/client3.png",
+        imgPath: "",
     },
     {
         name: "Guy Hawkins",
         mentions: "@guyhawkins",
         review:
             "Collaborating with Jose was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-        imgPath: "/images/client2.png",
+        imgPath: "",
     },
     {
         name: "Marvin McKinney",
         mentions: "@marvinmckinney",
         review:
             "Jose was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
-        imgPath: "/images/client5.png",
+        imgPath: "",
     },
     {
         name: "Floyd Miles",
         mentions: "@floydmiles",
         review:
             "Jose’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
-        imgPath: "/images/client4.png",
+        imgPath: "",
     }
 ];
 
 const socialImgs = [
     {
         name: "insta",
-        url: "https://www.instagram.com/",
         imgPath: "/images/insta.png",
+        url: "https://www.instagram.com/josepucciarelli?igsh=MWJxcnRuNTV5bGd3aw%3D%3D&utm_source=qr"
     },
     {
-        name: "fb",
-        url: "https://www.facebook.com/",
-        imgPath: "/images/fb.png",
+        name: "wp",
+        imgPath: "/images/wp.svg",
+        url: "https://wa.link/q3wnur"
+    },
+    {
+        name: "x",
+        imgPath: "/images/github.svg",
+        url: "https://github.com/josepucciarelli"
     },
     {
         name: "linkedin",
-        url: "https://www.linkedin.com/",
         imgPath: "/images/linkedin.png",
+        url: "http://www.linkedin.com/in/jose-pucciarelli-851383220"
     },
 ];
 
