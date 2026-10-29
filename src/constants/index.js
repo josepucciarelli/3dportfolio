@@ -234,14 +234,6 @@ const projects = [
         desc: "Official site for a professional violinist: digital sheet music store, event bookings and media portfolio. Migrated to Hostinger and optimized for speed (images cut from 25 MB to under 1 MB).",
     },
     {
-        title: "Luminaria",
-        url: "https://luminariapy.com/",
-        imgPath: "/images/Luminaria.png",
-        bg: "bg-[#6B728E]",
-        alt: "Luminaria",
-        desc: "Developed a functional e-commerce platform for a Paraguayan lighting store, leveraging WordPress (PHP, CSS) with dynamic catalog integration, inventory management, quotation system, and mobile-optimized user experience.",
-    },
-    {
         title: "Google Drive Clone",
         url: "https://google-drive-clone-beta-ivory.vercel.app/sign-in",
         imgPath: "/images/project2.webp",
