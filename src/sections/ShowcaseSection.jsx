@@ -2,42 +2,28 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { projects } from "../constants/index.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ShowcaseSection = () => {
     const sectionRef = useRef(null);
-    const FabioARef = useRef(null);
-    const GoogleDRef = useRef(null);
-    const ResumitRef = useRef(null);
+    const cardRefs = useRef([]);
 
     useGSAP(() => {
-        // Animation for the main section
-        gsap.fromTo(
-            sectionRef.current,
-            { opacity: 0 },
-            { opacity: 1, duration: 1.5 }
-        );
+        gsap.fromTo(sectionRef.current, { opacity: 0 }, { opacity: 1, duration: 1.5 });
 
-        // Animations for each app showcase
-        const cards = [FabioARef.current, GoogleDRef.current, ResumitRef.current];
-
-        cards.forEach((card, index) => {
+        cardRefs.current.forEach((card, index) => {
+            if (!card) return;
             gsap.fromTo(
                 card,
-                {
-                    y: 50,
-                    opacity: 0,
-                },
+                { y: 50, opacity: 0 },
                 {
                     y: 0,
                     opacity: 1,
                     duration: 1,
                     delay: 0.3 * (index + 1),
-                    scrollTrigger: {
-                        trigger: card,
-                        start: "top bottom-=100",
-                    },
+                    scrollTrigger: { trigger: card, start: "top bottom-=100" },
                 }
             );
         });
@@ -46,43 +32,34 @@ const ShowcaseSection = () => {
     return (
         <div id="work" ref={sectionRef} className="app-showcase">
             <div className="w-full">
-                <div className='showcaselayout'>
-                    <a href="https://www.fabioaraujopy.com/" target="_blank" rel="noopener noreferrer" ref={FabioARef} className="first-project-wrapper cursor-pointer block">
-                        <div className="image-wrapper">
-                            <img src="/images/project1.webp" alt="Fabio Araujo" className="object-left-top" />
-                        </div>
-                        <div className="text-content">
-                            <h2>
-                                Fabio Araujo Landing Page
-                            </h2>
-                            <p className="text-white-50 md:text-xl">
-                                Official site for a professional violinist: digital sheet music store, event bookings and media portfolio. Migrated to Hostinger and optimized for speed (images cut from 25 MB to under 1 MB).
-                            </p>
-                        </div>
-                    </a>
-
-                    <div className="project-list-wrapper overflow-hidden">
-                        <a href="https://google-drive-clone-beta-ivory.vercel.app/sign-in" target="_blank" rel="noopener noreferrer" className="project cursor-pointer block" ref={GoogleDRef}>
-                            <div className="image-wrapper bg-[#e5eef5]">
+                <div className="showcaselayout">
+                    {projects.map((project, index) => (
+                        <a
+                            key={project.title}
+                            href={project.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            ref={(el) => (cardRefs.current[index] = el)}
+                            className="project-card cursor-pointer block"
+                        >
+                            <div className={`image-wrapper ${project.bg ?? ""}`}>
                                 <img
-                                    src="/images/project2.webp"
-                                    alt="File Management Platform"
+                                    src={project.imgPath}
+                                    alt={project.alt}
+                                    loading="lazy"
+                                    className={project.imgClass ?? ""}
                                 />
                             </div>
-                            <h2>Google Drive Clone</h2>
-                        </a>
-
-                        <a href="https://mediumblue-koala-315548.hostingersite.com/" target="_blank" rel="noopener noreferrer" className="project cursor-pointer block" ref={ResumitRef}>
-                            <div className="image-wrapper bg-[#dfefeb]">
-                                <img src="/images/project3.png" alt="AI Analyzer" />
+                            <div className="text-content">
+                                <h2>{project.title}</h2>
+                                <p className="text-white-50 md:text-base">{project.desc}</p>
                             </div>
-                            <h2>Resumit - AI Analyzer</h2>
                         </a>
-                    </div>
-
+                    ))}
                 </div>
             </div>
         </div>
-    )
-}
-export default ShowcaseSection
+    );
+};
+
+export default ShowcaseSection;

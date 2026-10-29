@@ -29,46 +29,19 @@ const words = [
 ];
 
 const counterItems = [
-    { value: 2, suffix: "+", label: "Years of Experience" },
-    { value: 3, suffix: "+", label: "Satisfied Clients" },
+    { value: 3, suffix: "+", label: "Years of Experience" },
+    { value: 4, suffix: "+", label: "Satisfied Clients" },
     { value: 7, suffix: "+", label: "Completed Projects" },
     { value: 100, suffix: "%", label: "Client Retention Rate" },
 ];
 
 const logoIconsList = [
-    {
-        imgPath: "/images/logos/company-logo-1.png",
-    },
-    /*{
-        imgPath: "/images/logos/company-logo-2.png",
-    },
-    {
-        imgPath: "/images/logos/company-logo-3.png",
-    },*/
-    {
-        imgPath: "/images/logos/company-logo-4.png",
-    },
-    {
-        imgPath: "/images/logos/company-logo-5.png",
-    },
-    {
-        imgPath: "/images/logos/company-logo-6.png",
-    },
-    {
-        imgPath: "/images/logos/company-logo-7.png",
-    },
-    /*{
-        imgPath: "/images/logos/company-logo-8.png",
-    },*/
-    {
-        imgPath: "/images/logos/company-logo-9.png",
-    },
-    /*{
-        imgPath: "/images/logos/company-logo-10.png",
-    },
-    {
-        imgPath: "/images/logos/company-logo-11.png",
-    },*/
+    { imgPath: "/images/logos/company-logo-1.png" },
+    { imgPath: "/images/logos/company-logo-5.png" },
+    { imgPath: "/images/logos/company-logo-7.png" },
+    { imgPath: "/images/logos/company-logo-9.png" },
+    { imgPath: "/images/logos/company-logo-10.png" },
+    { imgPath: "/images/logos/limen_logo.png" },
 ];
 
 const abilities = [
@@ -99,7 +72,7 @@ const techStackImgs = [
         imgPath: "/images/logos/nextjs.svg",
     },
     {
-        name: "Backend Developer",
+        name: "JavaScript Developer",
         imgPath: "/images/logos/node.png",
     },
     {
@@ -157,7 +130,7 @@ const expCards = [
         review:
             "Jose Pucciarelli’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
         imgPath: "/images/exp2.png",
-        logoPath: "/images/logo2.png",
+        logoPath: "/images/logos/react.png",
         title: "React Native Developer",
         date: "May 2024 - Present",
         responsibilities: [
@@ -244,6 +217,48 @@ const socialImgs = [
     },
 ];
 
+const projects = [
+    {
+        title: "Limen Agency Landing Page",
+        url: "https://limenagencia.com/",
+        imgPath: "/images/limen.png",
+        alt: "Limen",
+        desc: "Landing Page developed using React Native, TypeScript & TailwindCSS — delivering a sleek interface and smooth user interactions.",
+    },
+    {
+        title: "Fabio Araujo Landing Page",
+        url: "https://www.fabioaraujopy.com/",
+        imgPath: "/images/project1.webp",
+        imgClass: "object-left-top",
+        alt: "Fabio Araujo",
+        desc: "Official site for a professional violinist: digital sheet music store, event bookings and media portfolio. Migrated to Hostinger and optimized for speed (images cut from 25 MB to under 1 MB).",
+    },
+    {
+        title: "Luminaria",
+        url: "https://luminariapy.com/",
+        imgPath: "/images/Luminaria.png",
+        bg: "bg-[#6B728E]",
+        alt: "Luminaria",
+        desc: "Developed a functional e-commerce platform for a Paraguayan lighting store, leveraging WordPress (PHP, CSS) with dynamic catalog integration, inventory management, quotation system, and mobile-optimized user experience.",
+    },
+    {
+        title: "Google Drive Clone",
+        url: "https://google-drive-clone-beta-ivory.vercel.app/sign-in",
+        imgPath: "/images/project2.webp",
+        bg: "bg-[#e5eef5]",
+        alt: "File Management Platform",
+        desc: "Web application that allows users to upload, download, share and store files. It provides a user-friendly interface for managing files and folders, similar to Google Drive.",
+    },
+    {
+        title: "Stonks",
+        url: "https://stonksapp-red.vercel.app/",
+        imgPath: "/images/stonks.png",
+        bg: "bg-[#6B728E]",
+        alt: "Stonks",
+        desc: "Real-Time Stocks, Currencies, and Crypto.",
+    },
+];
+
 export {
     words,
     abilities,
@@ -256,4 +271,5 @@ export {
     techStackIcons,
     techStackImgs,
     navLinks,
+    projects,
 };
