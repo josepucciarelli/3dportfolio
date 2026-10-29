@@ -47,16 +47,16 @@ const ShowcaseSection = () => {
         <div id="work" ref={sectionRef} className="app-showcase">
             <div className="w-full">
                 <div className='showcaselayout'>
-                    <a href="https://fabioaraujopy.com/" target="_blank" rel="noopener noreferrer" ref={FabioARef} className="first-project-wrapper cursor-pointer block">
+                    <a href="https://www.fabioaraujopy.com/" target="_blank" rel="noopener noreferrer" ref={FabioARef} className="first-project-wrapper cursor-pointer block">
                         <div className="image-wrapper">
-                            <img src="/images/project1.webp" alt="Fabio Araujo" />
+                            <img src="/images/project1.webp" alt="Fabio Araujo" className="object-left-top" />
                         </div>
                         <div className="text-content">
                             <h2>
                                 Fabio Araujo Landing Page
                             </h2>
                             <p className="text-white-50 md:text-xl">
-                                An app built with React Native, TypeScript, & TailwindCSS for a fast, user-friendly experience.
+                                Official site for a professional violinist: digital sheet music store, event bookings and media portfolio. Migrated to Hostinger and optimized for speed (images cut from 25 MB to under 1 MB).
                             </p>
                         </div>
                     </a>
