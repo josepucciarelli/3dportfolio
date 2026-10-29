@@ -1,0 +1,39 @@
+name: Build y deploy a Hostinger
+
+# Cada push a mainGit compila el sitio y publica el resultado (dist/)
+# en la rama "deploy". Hostinger (hPanel > Avanzado > Git) esta
+# conectado a esa rama y la copia a public_html automaticamente.
+on:
+  push:
+    branches: [mainGit]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Publicar dist/ en la rama deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: deploy
+          force_orphan: true
+          commit_message: "Build ${{ github.sha }}"
