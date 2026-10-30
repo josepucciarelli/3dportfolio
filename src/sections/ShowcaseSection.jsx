@@ -3,12 +3,14 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { projects } from "../constants/index.js";
+import { useLang } from "../i18n/LanguageContext.jsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ShowcaseSection = () => {
     const sectionRef = useRef(null);
     const cardRefs = useRef([]);
+    const { l } = useLang();
 
     useGSAP(() => {
         gsap.fromTo(sectionRef.current, { opacity: 0 }, { opacity: 1, duration: 1.5 });
@@ -52,7 +54,7 @@ const ShowcaseSection = () => {
                             </div>
                             <div className="text-content">
                                 <h2>{project.title}</h2>
-                                <p className="text-white-50 md:text-base">{project.desc}</p>
+                                <p className="text-white-50 md:text-base">{l(project.desc)}</p>
                             </div>
                         </a>
                     ))}

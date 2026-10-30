@@ -4,8 +4,10 @@ import HeroExperience from "../components/models/HeroModels/HeroExperience.jsx";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import AnimatedCounter from "../components/AnimatedCounter.jsx";
+import { useLang } from "../i18n/LanguageContext.jsx";
 
 const Hero = () => {
+    const { t, l } = useLang();
     useGSAP(() => {
         gsap.fromTo('.hero-text h1',
             {
@@ -34,7 +36,7 @@ const Hero = () => {
                     <div className="flex flex-col gap-7">
                         <div className="hero-text">
                             <h1>
-                                Shaping
+                                {t("hero.shaping")}
                                 <span className="slide">
                   <span className="wrapper">
                     {words.map((word, index) => (
@@ -44,23 +46,23 @@ const Hero = () => {
                         >
                         <img
                             src={word.imgPath}
-                            alt="person"
+                            alt=""
                             className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
                         />
-                        <span>{word.text}</span>
+                        <span>{l(word.text)}</span>
                       </span>
                     ))}
                   </span>
                 </span>
                 </h1>
-                <h1>into Real Projects</h1>
-                <h1>that Deliver Results</h1>
+                <h1>{t("hero.line2")}</h1>
+                <h1>{t("hero.line3")}</h1>
                 </div>
                 <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                    Hi I'm Jose Pucciarelli, a developer based in Paraguay with passion for web development.
+                    {t("hero.intro")}
                 </p>
                 <Button
-                    text="See My Work"
+                    text={t("hero.cta")}
                     className="md:w-80 md:h-16 w-60 h-12"
                     id="counter"
                 />

@@ -1,8 +1,10 @@
 import {navLinks} from "../constants/index.js";
 import {useEffect, useState} from "react";
+import {useLang} from "../i18n/LanguageContext.jsx";
 
 const NavBar = () => {
     const [scrolled, setScrolled] = useState(false);
+    const {lang, setLang, t, l} = useLang();
 
     useEffect(() => {
         // create an event listener for when the user scrolls
@@ -30,9 +32,9 @@ const NavBar = () => {
                 <nav className="desktop">
                     <ul>
                         {navLinks.map(({link, name}) => (
-                            <li key={name} className="group">
+                            <li key={link} className="group">
                                 <a href={link}>
-                                    <span>{name}</span>
+                                    <span>{l(name)}</span>
                                     <span className="underline"/>
                                 </a>
                             </li>
@@ -40,11 +42,27 @@ const NavBar = () => {
                     </ul>
                 </nav>
 
-                <a href="#contact" className="contact-btn group">
-                    <div className="inner">
-                        <span>Contact Me</span>
+                <div className="nav-actions">
+                    <div className="lang-toggle" role="group" aria-label={t("nav.switchTo")}>
+                        {["en", "es"].map((code) => (
+                            <button
+                                key={code}
+                                type="button"
+                                className={lang === code ? "active" : ""}
+                                aria-pressed={lang === code}
+                                onClick={() => setLang(code)}
+                            >
+                                {code.toUpperCase()}
+                            </button>
+                        ))}
                     </div>
-                </a>
+
+                    <a href="#contact" className="contact-btn group">
+                        <div className="inner">
+                            <span>{t("nav.contact")}</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </header>
     )

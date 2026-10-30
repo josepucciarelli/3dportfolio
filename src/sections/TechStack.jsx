@@ -3,10 +3,12 @@ import gsap from "gsap";
 
 import TitleHeader from "../components/TitleHeader";
 import TechIconCardExperience from "../components/models/tech_logos/TechIconCardExperience";
-import {techStackIcons, techStackImgs} from "../constants";
+import { techStackImgs } from "../constants";
+import { useLang } from "../i18n/LanguageContext.jsx";
 // import { techStackImgs } from "../constants";
 
 const TechStack = () => {
+    const { t, l } = useLang();
     // Animate the tech cards in the skills section
     useGSAP(() => {
         // This animation is triggered when the user scrolls to the #skills wrapper
@@ -39,8 +41,8 @@ const TechStack = () => {
         <div id="skills" className="flex-center section-padding">
             <div className="w-full h-full md:px-10 px-5">
                 <TitleHeader
-                    title="How I Can Contribute & My Key Skills"
-                    sub="🤝 What I Bring to the Table"
+                    title={t("skills.title")}
+                    sub={t("skills.sub")}
                 />
                 <div className="tech-grid">
                     {/* Loop through the techStackIcons array and create a component for each item.
@@ -83,7 +85,7 @@ const TechStack = () => {
                   <img src={techStackIcon.imgPath} alt="" />
                 </div>
                 <div className="padding-x w-full">
-                  <p>{techStackIcon.name}</p>
+                  <p>{l(techStackIcon.name)}</p>
                 </div>
               </div>
             </div>

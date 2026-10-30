@@ -5,10 +5,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { expCards } from "../constants";
 import TitleHeader from "../components/TitleHeader";
 import GlowCard from "../components/GlowCard";
+import { useLang } from "../i18n/LanguageContext.jsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ExperienceSection = () => {
+    const { t, l } = useLang();
     useGSAP(() => {
         // Loop through each timeline card and animate them in
         // as the user scrolls to each card
@@ -96,15 +98,15 @@ const ExperienceSection = () => {
         >
             <div className="w-full h-full md:px-20 px-5">
                 <TitleHeader
-                    title="Professional Work Experience"
-                    sub="💼 My Career Overview"
+                    title={t("experience.title")}
+                    sub={t("experience.sub")}
                 />
                 <div className="mt-32 relative">
                     <div className="relative z-50 xl:space-y-32 space-y-10">
-                        {expCards.map((card) => (
-                            <div key={card.title} className="exp-card-wrapper">
+                        {expCards.map((card, index) => (
+                            <div key={card.company} className="exp-card-wrapper">
                                 <div className="xl:w-2/6">
-                                    <GlowCard card={card}>
+                                    <GlowCard card={card} index={index}>
                                         <div />
                                     </GlowCard>
                                 </div>
@@ -116,21 +118,28 @@ const ExperienceSection = () => {
                                         </div>
                                         <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
                                             <div className="timeline-logo">
-                                                <img src={card.logoPath} alt="logo" />
+                                                {card.logoPath ? (
+                                                    <img src={card.logoPath} alt={card.company} />
+                                                ) : (
+                                                    <span className="md:text-2xl text-base font-semibold text-white-50">
+                                                        {card.initials}
+                                                    </span>
+                                                )}
                                             </div>
                                             <div>
-                                                <h1 className="font-semibold text-3xl">{card.title}</h1>
+                                                <h1 className="font-semibold text-3xl">{l(card.title)}</h1>
+                                                <p className="mt-2 text-xl text-[#839CB5]">{card.company}</p>
                                                 <p className="my-5 text-white-50">
-                                                    🗓️&nbsp;{card.date}
+                                                    🗓️&nbsp;{l(card.date)}
                                                 </p>
                                                 <p className="text-[#839CB5] italic">
-                                                    Responsibilities
+                                                    {t("experience.responsibilities")}
                                                 </p>
                                                 <ul className="list-disc ms-5 mt-5 flex flex-col gap-5 text-white-50">
                                                     {card.responsibilities.map(
                                                         (responsibility, index) => (
                                                             <li key={index} className="text-lg">
-                                                                {responsibility}
+                                                                {l(responsibility)}
                                                             </li>
                                                         )
                                                     )}

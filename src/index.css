@@ -141,6 +141,22 @@ section {
             }
         }
 
+        .nav-actions {
+            @apply flex items-center gap-3 md:gap-4;
+        }
+
+        .lang-toggle {
+            @apply flex items-center rounded-lg border border-black-50 p-1 text-sm font-semibold;
+
+            button {
+                @apply px-2.5 py-1 rounded-md text-white-50 transition-colors duration-300 cursor-pointer hover:text-white;
+
+                &.active {
+                    @apply bg-white text-black hover:text-black;
+                }
+            }
+        }
+
         .contact-btn {
             @apply flex;
 
@@ -264,6 +280,10 @@ section {
 
     .timeline-logo {
         @apply md:size-20 size-10 flex-none rounded-full flex justify-center items-center md:-translate-y-7 border border-black-50 bg-black-100;
+
+        & img {
+            @apply w-3/5 h-3/5 object-contain;
+        }
     }
 
     .exp-card-wrapper {

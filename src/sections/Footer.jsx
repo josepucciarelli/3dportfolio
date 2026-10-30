@@ -1,11 +1,13 @@
 import { socialImgs } from "../constants";
+import { useLang } from "../i18n/LanguageContext.jsx";
 
 const Footer = () => {
+    const { t } = useLang();
     return (
         <footer className="footer">
             <div className="footer-container">
                 <div className="flex flex-col justify-center">
-                    <p><a href="/terms.html" className="no-underline">Terms & Conditions</a></p>
+                    <p><a href="/terms.html" className="no-underline">{t("footer.terms")}</a></p>
                 </div>
                 <div className="socials">
                     {socialImgs.map((socialImg, index) => (
@@ -18,7 +20,7 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col justify-center">
                     <p className="text-center md:text-end">
-                        © {new Date().getFullYear()} Site Sprint Py. All rights reserved.
+                        © {new Date().getFullYear()} Site Sprint Py. {t("footer.rights")}
                     </p>
                 </div>
             </div>

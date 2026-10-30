@@ -1,8 +1,10 @@
 import { useRef } from "react";
+import { useLang } from "../i18n/LanguageContext.jsx";
 
 const GlowCard = ({ card, index, children }) => {
     // refs for all the cards
     const cardRefs = useRef([]);
+    const { l } = useLang();
 
     // when mouse moves over a card, rotate the glow effect
     const handleMouseMove = (index) => (e) => {
@@ -39,7 +41,7 @@ const GlowCard = ({ card, index, children }) => {
                 ))}
             </div>*/}
             <div className="mb-5">
-                <p className="text-white-50 text-lg">{card.review}</p>
+                <p className="text-white-50 text-lg">{l(card.summary)}</p>
             </div>
             {children}
         </div>
