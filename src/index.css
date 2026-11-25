@@ -436,24 +436,25 @@ section {
     overflow: hidden;
     position: relative;
 }
-.marquee-box {
+.marquee-track {
     display: flex;
     align-items: center;
-    width: 200%;
+    width: max-content;
     height: 100%;
-    position: absolute;
-    overflow: hidden;
-    animation: marquee 60s linear infinite;
+    animation: marquee 100s linear infinite;
+    will-change: transform;
 }
-.marquee-item {
-    float: left;
+.marquee-group {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 @keyframes marquee {
-    0% {
-        left: 0;
+    from {
+        transform: translateX(0);
     }
-    100% {
-        left: -100%;
+    to {
+        transform: translateX(-50%);
     }
 }
 /* marquee end */

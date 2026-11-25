@@ -27,6 +27,7 @@ const logoIconsList = [
     { imgPath: "/images/logos/limen_logo.png", name: "Limen" },
     { imgPath: "/images/logos/macstore_logo.png", name: "macstore" },
     { imgPath: "/images/logos/zuba_logo.png", name: "ZUBA" },
+    { imgPath: "/images/logos/eleva_logo.png", name: "Eleva by Zuba" },
 ];
 
 const abilities = [
