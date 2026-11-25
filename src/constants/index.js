@@ -301,6 +301,17 @@ const projects = [
         },
     },
     {
+        title: "Resumit · AI Resume Analyzer",
+        url: "https://idyllic-wheat-leopard-92.hostingersite.com/",
+        imgPath: "/images/resumit.webp",
+        imgClass: "object-left-top",
+        alt: "Resumit - AI Resume Analyzer",
+        desc: {
+            en: "Web app that analyzes resumes with AI: upload a PDF and the job description to get an ATS score, category ratings and concrete tips to improve. Built with React Router, TypeScript, Tailwind and Puter.js.",
+            es: "App web que analiza CVs con IA: subís el PDF y la descripción del puesto y obtenés un puntaje ATS, notas por categoría y consejos concretos para mejorarlo. Hecha con React Router, TypeScript, Tailwind y Puter.js.",
+        },
+    },
+    {
         title: "Limen Agency Landing Page",
         url: "https://limenagencia.com/",
         imgPath: "/images/limen.png",
