@@ -271,7 +271,7 @@ const socialImgs = [
 const projects = [
     {
         title: "Familiar Proyecta",
-        url: "https://banco-familiar.webflow.io/proyecta",
+        url: "https://www.familiar.com.py/proyecta",
         imgPath: "/images/familiar-proyecta.webp",
         imgClass: "object-left-top",
         alt: "Familiar Proyecta - Banco Familiar",
@@ -282,7 +282,7 @@ const projects = [
     },
     {
         title: "Apple Pay & Google Pay · Banco Familiar",
-        url: "https://banco-familiar.webflow.io/apple-pay",
+        url: "https://www.familiar.com.py/apple-pay",
         imgPath: "/images/familiar-apple-pay.webp",
         imgClass: "object-left-top",
         alt: "Apple Pay - Banco Familiar",
@@ -293,7 +293,7 @@ const projects = [
     },
     {
         title: "Rialto x Banco Familiar",
-        url: "https://banco-familiar.webflow.io/rialto",
+        url: "https://www.familiar.com.py/rialto",
         imgPath: "/images/familiar-rialto.webp",
         alt: "Rialto x Banco Familiar",
         desc: {
