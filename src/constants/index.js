@@ -317,6 +317,17 @@ const projects = [
         },
     },
     {
+        title: "Ta-Te-Ti Online",
+        url: "https://tateti-proyecto-de-juego.netlify.app/",
+        imgPath: "/images/tateti.webp",
+        imgClass: "object-left-top",
+        alt: "Ta-Te-Ti Online - real-time multiplayer game",
+        desc: {
+            en: "Real-time multiplayer tic-tac-toe: quick matchmaking or private rooms shared by link, 3-life rounds and an in-game chat with quick reactions. The server validates every move. Built with Angular 22 (signals, zoneless), Node.js, Socket.IO and TypeScript.",
+            es: "Ta-te-ti multijugador en tiempo real: partidas rápidas o salas privadas para compartir por link, rondas a 3 vidas y chat en la partida con reacciones rápidas. El servidor valida cada jugada. Hecho con Angular 22 (signals, sin zone.js), Node.js, Socket.IO y TypeScript.",
+        },
+    },
+    {
         title: "Limen Agency Landing Page",
         url: "https://limenagencia.com/",
         imgPath: "/images/limen.png",
