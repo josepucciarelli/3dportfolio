@@ -142,7 +142,7 @@ const expCards = [
         ],
     },
     {
-        title: { en: "Web Developer & Campaign Manager", es: "Desarrollador Web y Campaign Manager" },
+        title: { en: "Web Developer & Paid Media Strategist", es: "Desarrollador Web y Estratega de Medios Pagados" },
         company: "LIMEN",
         initials: "L",
         logoPath: "/images/logos/limen_logo_yellow.png",
@@ -171,6 +171,10 @@ const expCards = [
             {
                 en: "Implemented Meta Pixel and custom events to track and optimize conversions.",
                 es: "Implementación de Meta Pixel y eventos para seguimiento y optimización de conversiones.",
+            },
+            {
+                en: "Worked with multidisciplinary teams using agile methodologies.",
+                es: "Trabajo colaborativo con equipos multidisciplinarios bajo metodologías ágiles.",
             },
         ],
     },
